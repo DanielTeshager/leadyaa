@@ -58,7 +58,7 @@ document.querySelector('#q').addEventListener('keyup', function (e) {
     const searchValue = document.querySelector('#q').value;
     //fetch the data from the server
     parentElement = '.result-content';
-    fetch('http://localhost:8282/contacts/search?q=' + searchValue)
+    fetch('https://frozen-tundra-81760.herokuapp.com/search?q=' + searchValue)
         .then(response => response.json())
         .then(data => {
             //clear the featured div
