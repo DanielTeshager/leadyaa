@@ -2,7 +2,7 @@
 
 //add event listener on document ready
 document.addEventListener('DOMContentLoaded', function fetchData() {
-    fetch('http://localhost:8282/')
+    fetch('https://frozen-tundra-81760.herokuapp.com/')
         .then(response => response.json())
         .then(data => {
         //    create a card for each item
@@ -58,7 +58,7 @@ document.querySelector('#q').addEventListener('keyup', function (e) {
     const searchValue = document.querySelector('#q').value;
     //fetch the data from the server
     parentElement = '.result-content';
-    fetch('https://frozen-tundra-81760.herokuapp.com/search?q=' + searchValue)
+    fetch('https://frozen-tundra-81760.herokuapp.com/contacts/search?q=' + searchValue)
         .then(response => response.json())
         .then(data => {
             //clear the featured div
