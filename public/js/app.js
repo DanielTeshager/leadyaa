@@ -2,13 +2,16 @@
 
 //add event listener on document ready
 document.addEventListener('DOMContentLoaded', function fetchData() {
+    //show loading
+    document.querySelector('.loader').style.display = 'block';
     fetch('https://frozen-tundra-81760.herokuapp.com/')
         .then(response => response.json())
         .then(data => {
-        //    create a card for each item
-            parentElement = '#featured-div';
+        //hide loading
+        document.querySelector('.loader').style.display = 'none';
+        // create a card for each item
             data.forEach(item => {
-                createCard(item, parentElement);
+                createCard(item);
             });
         })
         .catch(error => console.log(error));
@@ -57,7 +60,8 @@ document.querySelector('#q').addEventListener('keyup', function (e) {
     e.preventDefault();
     const searchValue = document.querySelector('#q').value;
     //fetch the data from the server
-    parentElement = '.result-content';
+    // show the loader
+    document.querySelector('.loader').style.display = 'block';
     fetch('https://frozen-tundra-81760.herokuapp.com/contacts/search?q=' + searchValue)
         .then(response => response.json())
         .then(data => {
@@ -65,6 +69,8 @@ document.querySelector('#q').addEventListener('keyup', function (e) {
             document.querySelector('.result-content').innerHTML = '';
             console.log(data.message);  
             console.log(typeof(data));
+            //hide the loader
+            document.querySelector('.loader').style.display = 'none';
             //create a card for each item
             if (data.success === false) {
                 document.querySelector('.result-content').innerHTML = `<h6>No results found</h6>`;
