@@ -1,0 +1,61 @@
+.bg-leadyaa {
+    background-color: #873df7;
+}
+.search-bar {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.search-bar input {
+    border: none;
+    /* border-bottom: 1px solid #873df7; */
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #873df7;
+    background: white important!;
+}
+#q{
+    background: white;
+}
+header{
+    padding: 20px  0;
+}
+li{
+    display: inline-flex;
+}
+
+.collection-header{
+    background: #995cf6;
+    padding: 3px;
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+}
+.collection li{
+    padding-left: 10px;
+}
+/* footer csss  */
+footer{
+    background: #995cf6;
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
+    /* vertically center text */
+    vertical-align: center;
+}
+/* make footer stick to the bottom */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+i{
+    position: relative;
+    top: 4px;
+    padding-right: 5px;
+    color: #873df7;
+}
