@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', function fetchData() {
     //show loading
     document.querySelector('.loader').style.display = 'block';
+    // fetch using cors header
     fetch('https://frozen-tundra-81760.herokuapp.com/')
         .then(response => response.json())
         .then(data => {
