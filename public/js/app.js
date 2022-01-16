@@ -83,4 +83,7 @@ document.querySelector('#q').addEventListener('keyup', function (e) {
         }).catch(error => console.log(error));
 });
 
-
+//add event for the search field to clear the search bar
+document.querySelector('#q').addEventListener('focus', function (e) {
+    document.querySelector('#q').value = '';
+});
