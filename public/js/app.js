@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function fetchData() {
         //hide loading
         document.querySelector('.loader').style.display = 'none';
         // create a card for each item
-            data.forEach(item => {
+            data.contact_list.forEach(item => {
                 createCard(item);
             });
         })
